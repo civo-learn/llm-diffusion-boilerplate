@@ -38,6 +38,8 @@ Before beginning, ensure you have the following:
     civo_token = "YOUR_API_KEY"
     ```
 
+    or make a secret called `CIVO_TOKEN` in your GitHub repository which will be used by the GitHub Actions workflow.
+
 ## Project Configuration
 
 Project configurations are managed within the `tf/variables.tf` file. This file contains definitions and default values for the Terraform variables used in the project.
