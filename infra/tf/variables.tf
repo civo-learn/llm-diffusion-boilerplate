@@ -5,7 +5,7 @@
 # The name of the cluster
 variable "cluster_name" {
     type    = string
-    default = "llm_boilerplate"
+    default = "llmdiffusion_boilerplate"
     description = "The name of the cluster to create"
 
 }

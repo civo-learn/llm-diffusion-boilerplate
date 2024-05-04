@@ -2,9 +2,9 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/civo/civo" {
-  version     = "1.0.39"
-  constraints = "1.0.39"
+  version = "1.0.39"
   hashes = [
+    "h1:MSu2/wX7Rnzxzw6TBMqT2OVyz0zeitSAElNAt2K7x2E=",
     "h1:q9Q9sgU/rz/i6LSrC1UIIe09ho7RIhuQy4PwONMK6aM=",
     "zh:31be8b548cd947e295d36f15d06aa8639b341b4a5ab6d510b2d8ad3cdad5fd80",
     "zh:487703dacda66ac26191995fb3de7a81f40e693811df4a4c4bbb5749683e3858",
@@ -27,6 +27,7 @@ provider "registry.terraform.io/hashicorp/helm" {
   constraints = "2.12.1"
   hashes = [
     "h1:aBfcqM4cbywa7TAxfT1YoFS+Cst9waerlm4XErFmJlk=",
+    "h1:sgYI7lwGqJqPopY3NGmhb1eQ0YbH8PIXaAZAmnJrAvw=",
     "zh:1d623fb1662703f2feb7860e3c795d849c77640eecbc5a776784d08807b15004",
     "zh:253a5bc62ba2c4314875139e3fbd2feaad5ef6b0fb420302a474ab49e8e51a38",
     "zh:282358f4ad4f20d0ccaab670b8645228bfad1c03ac0d0df5889f0aea8aeac01a",
@@ -46,6 +47,7 @@ provider "registry.terraform.io/hashicorp/kubernetes" {
   version     = "2.25.2"
   constraints = "2.25.2"
   hashes = [
+    "h1:QlTKoO0efmkzgX/9y0DQCEkg7VeidOSQW8epF6B4cEQ=",
     "h1:T1WAQt40cAk721H0AM/eZ5YuodJaIfS8r3Tu7rKCJJE=",
     "zh:044788ac936e0e8ece8f78a2e4e366ecd435ea8235388eaf2cbc8e7975d9d970",
     "zh:24f5ff01df91f51f00ee7ff39430adeb63bb2ca4ea0042e68f06d6b65808c02f",
@@ -66,6 +68,7 @@ provider "registry.terraform.io/hashicorp/local" {
   version     = "2.4.0"
   constraints = "2.4.0"
   hashes = [
+    "h1:R97FTYETo88sT2VHfMgkPU3lzCsZLunPftjSI5vfKe8=",
     "h1:ZUEYUmm2t4vxwzxy1BvN1wL6SDWrDxfH7pxtzX8c6d0=",
     "zh:53604cd29cb92538668fe09565c739358dc53ca56f9f11312b9d7de81e48fab9",
     "zh:66a46e9c508716a1c98efbf793092f03d50049fa4a83cd6b2251e9a06aca2acf",

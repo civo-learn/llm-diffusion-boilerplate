@@ -1,0 +1,16 @@
+nameOverride: ""
+
+automatic1111:
+  annotations: {}
+  podAnnotations: {}
+  replicaCount: 1
+  image:
+    repository: rishitdagli/automatic1111-civo
+    tag: "latest"
+    pullPolicy: Always
+  service:
+    type: LoadBalancer
+    port: 7860
+    containerPort: 7860
+    nodePort: ""  # Specify this if you need a fixed nodePort
+  resources: {}

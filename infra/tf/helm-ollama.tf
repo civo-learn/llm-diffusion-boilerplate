@@ -13,6 +13,8 @@ resource "helm_release" "ollama" {
     "${file("values/ollama-values.yaml")}"
   ]
 
+  timeout          = 6000
+
   depends_on = [
     kubernetes_daemonset.nvidia-device-plugin-daemonset
   ]

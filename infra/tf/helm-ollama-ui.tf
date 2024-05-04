@@ -5,4 +5,6 @@ resource "helm_release" "ollama-ui" {
   namespace        = "ollama-ui"
   create_namespace = true
   replace = true
+
+  timeout          = 6000
 }

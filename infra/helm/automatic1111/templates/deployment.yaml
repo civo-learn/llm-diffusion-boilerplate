@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  replicas: {{ .Values.automatic1111.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+      - name: automatic1111
+        image: "{{ .Values.automatic1111.image.repository }}{{ if .Values.automatic1111.image.tag }}:{{ .Values.automatic1111.image.tag }}{{ end }}"
+        imagePullPolicy: {{ .Values.automatic1111.image.pullPolicy }}
+        ports:
+        - containerPort: {{ .Values.automatic1111.service.containerPort }}
+        env:
+          - name: PATH
+            value: /usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+          - name: LD_LIBRARY_PATH
+            value: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+          - name: NVIDIA_DRIVER_CAPABILITIES
+            value: compute,utility
+          - name: NVIDIA_VISIBLE_DEVICES
+            value: all
+        resources:
+          limits:
+            nvidia.com/gpu: 1

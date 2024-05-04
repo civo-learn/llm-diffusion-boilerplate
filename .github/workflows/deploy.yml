@@ -44,10 +44,10 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: ./app
-          file: ./app/Dockerfile
+          context: ./a1111
+          file: ./a1111/Dockerfile
           push: true
-          tags: ghcr.io/${{ env.repo_owner }}/llm-boilerplate-app:latest
+          tags: ghcr.io/${{ env.repo_owner }}/automatic1111-civo:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
           secrets: |
